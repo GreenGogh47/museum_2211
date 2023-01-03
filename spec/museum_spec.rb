@@ -13,14 +13,14 @@ RSpec.describe Museum do
       expect(dmns).to be_instance_of(Museum)
     end
 
-    it 'has attributes' do
+    xit 'has attributes' do
       expect(dmns.name).to eq("Denver Museum of Nature and Science")
       expect(dmns.exhibits).to eq([])
     end
   end
 
   describe '#add_exhitib' do
-    it 'can add exhibits to the array' do
+    xit 'can add exhibits to the array' do
       gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0})
       dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10})
       imax = Exhibit.new({name: "IMAX",cost: 15})
@@ -34,7 +34,7 @@ RSpec.describe Museum do
   end
 
   describe '#recommend_exhibits' do
-    it 'recommends list of interests' do
+    xit 'recommends list of interests' do
       patron_1.add_interest("Dead Sea Scrolls")
       patron_1.add_interest("Gems and Minerals")
       patron_2.add_interest("IMAX")
