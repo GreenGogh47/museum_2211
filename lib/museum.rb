@@ -12,9 +12,6 @@ class Museum
   end
 
   def recommend_exhibits(patron)
-    patron.interests.select { |interest| interest if @exhibits.include?(interest) }
+    @exhibits.select { |exhibit| exhibit if patron.interests.include?(exhibit.name) }
   end
-
-
-
 end
