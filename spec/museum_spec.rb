@@ -51,5 +51,4 @@ RSpec.describe Museum do
       expect(dmns.recommend_exhibits(patron_2)).to eq([imax])
     end
   end
-
 end
