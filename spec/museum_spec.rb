@@ -34,13 +34,13 @@ RSpec.describe Museum do
   end
 
   describe '#recommend_exhibits' do
-    xit 'recommends list of interests' do
+    it 'recommends list of interests' do
       patron_1.add_interest("Dead Sea Scrolls")
       patron_1.add_interest("Gems and Minerals")
       patron_2.add_interest("IMAX")
 
-      dmns.recommend_exhibits(patron_1)
-      dmns.recommend_exhibits(patron_2)
+      expect(dmns.recommend_exhibits(patron_1)).to eq([dead_sea_scrolls, gems_and_minerals])
+      expect(dmns.recommend_exhibits(patron_2)).to eq([imax])
     end
   end
 
